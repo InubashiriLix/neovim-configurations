@@ -76,6 +76,14 @@ vim.api.nvim_create_autocmd("FileType", {
     desc = "Set Teal comment string",
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function(ev)
+        vim.diagnostic.enable(false, { bufnr = ev.buf })
+    end,
+    desc = "Hide diagnostics in Markdown buffers",
+})
+
 vim.api.nvim_create_user_command("CheckIkunBalance", function()
     -- call the system application in the /usr/bin/check_ikun_balance_with_session
     ---@param out vim.SystemCompleted

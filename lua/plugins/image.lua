@@ -59,6 +59,6 @@ if not vim.g.neovide then
             hijack_file_patterns = { "*.PNG", "*.png", "*.JPG", "*.jpg", "*.JPEG", "*.jpeg", "*.gif", "*.webp", "*.avif" }, -- render image files as images when opened
         },
     }
-else
+else -- the neovide does not support the kitty / ueberzug protocols. so no 3rd/image.nvim
     return {}
 end
