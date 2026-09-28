@@ -21,7 +21,7 @@ return {
             },
 
             serverPath = vim.fn.stdpath("data") .. "/live-server/", --default
-            open = "folder", -- folder|cwd     --default
+            open = "folder",                                        -- folder|cwd     --default
         })
     end,
 }

@@ -6,9 +6,9 @@ return {
             accept_word = "<C-y>",
             clear_suggestion = "<C-t>",
         },
-        -- color = {
-        --     suggestion_color = "#0f0f0f",
-        --     cterm = 244,
-        -- },
+        color = {
+            suggestion_color = "#cf0f0f",
+            cterm = 244,
+        },
     },
 }

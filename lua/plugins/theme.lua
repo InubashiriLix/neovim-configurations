@@ -1,4 +1,4 @@
-vim.g.tokyonight_transparent = false
+vim.g.tokyonight_transparent = true
 
 function vim.g.toggle_tokyonight_transparent()
     vim.g.tokyonight_transparent = not vim.g.tokyonight_transparent
@@ -32,10 +32,23 @@ return {
             }
         end,
     },
-    {
-        "arturgoms/moonbow.nvim",
-        lazy = false,
-        priority = 800,
-    }
+    -- {
+    --     -- "arturgoms/moonbow.nvim",
+    --     dir = "/home/inubashiri/proj/neovim-plugin/moonbow.nvim/",
+    --     lazy = false,
+    --     priority = 1200,
+    --     config = function()
+    --         require("moonbow").setup({ transparent_mode = true })
+    --     end
+    -- },
 
+    -- {
+    --     "rebelot/kanagawa.nvim",
+    --     lazy = false,
+    --     theme = "wave",
+    --     background = {
+    --         dark = "wave",
+    --         light = "wave",
+    --     }
+    -- }
 }

@@ -1,5 +1,6 @@
-return {
-    {
+if not vim.g.neovide then
+    return {
+
         "3rd/image.nvim",
         opts = {
             backend = "kitty",        -- or "ueberzug" or "sixel"
@@ -39,10 +40,10 @@ return {
                     filetypes = { "typst" },
                 },
                 html = {
-                    enabled = false,
+                    enabled = true,
                 },
                 css = {
-                    enabled = false,
+                    enabled = true,
                 },
             },
             max_width = nil,
@@ -57,5 +58,7 @@ return {
             tmux_show_only_in_active_window = false,                                                                        -- auto show/hide images in the correct Tmux window (needs visual-activity off)
             hijack_file_patterns = { "*.PNG", "*.png", "*.JPG", "*.jpg", "*.JPEG", "*.jpeg", "*.gif", "*.webp", "*.avif" }, -- render image files as images when opened
         },
-    },
-}
+    }
+else
+    return {}
+end

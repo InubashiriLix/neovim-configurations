@@ -112,11 +112,12 @@ local opts = {
 
 return {
     {
-        "InubashiriLix/ambient.nvim",
-        -- dir = "/home/inubashiri/proj/neovim-plugin/ambient.nvim",
+        -- "InubashiriLix/ambient.nvim",
+        dir = "/home/inubashiri/proj/neovim-plugin/ambient.nvim",
         name = "ambient.nvim",
         main = "ambient",
-        event = "VeryLazy",
+        -- WARNING: `event = "VeryLazy"` is not recommanded cause it will make lazy.nvim set it up immediately as you launching neovim, that is, uncommanded music scan will happend once you launch nvim.
+        -- event = "VeryLazy",
         cmd = {
             "Ambient"
         },

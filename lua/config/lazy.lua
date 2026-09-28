@@ -17,13 +17,14 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {
         -- add LazyVim and import its plugins
-        { "LazyVim/LazyVim",      import = "lazyvim.plugins" },
+        { "LazyVim/LazyVim",            import = "lazyvim.plugins", opts = { colorscheme = "tokyonight" } },
         -- import/override with your plugins
         -- lazy.nvim scans one directory level per import. Keep categories flat and explicit.
         { import = "plugins" },
         { import = "plugins.ai" },
         { import = "plugins.git" },
         { import = "plugins.lang" },
+        { import = "plugins.components" },
         -- { import = "plugins.theme" },
     },
     defaults = {
