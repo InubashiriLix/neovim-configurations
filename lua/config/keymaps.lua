@@ -58,3 +58,17 @@ vim.keymap.set("n", "<leader>gF", function()
         vim.notify("Failed to open URL: " .. err, vim.log.levels.ERROR)
     end
 end, { desc = "Open URL under cursor" })
+
+vim.keymap.set("n", "<leader><F1>+", function()
+        vim.api.nvim_command("silent! exec '!pactl set-sink-volume @DEFAULT_SINK@ +5%'")
+        vim.notify("turn up system volumn by 5!", vim.log.levels.DEBUG)
+    end,
+    { desc = "Turn up system volumn" }
+)
+
+vim.keymap.set("n", "leader<F1>_", function()
+        vim.api.nvim_command("silent! exec '!pactl set-sink-volume @DEFAULT_SINK@ -5%'")
+        vim.notify("turn up system volumn by 5!", vim.log.levels.DEBUG)
+    end,
+    { desc = "Turn down system volumn" }
+)

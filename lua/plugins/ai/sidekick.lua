@@ -110,11 +110,7 @@ return {
     opts = {
         nes = { enabled = false },
         cli = {
-            prompts = {
-                language_zh = "use chiense to explain, ask and anwser in this session.",
-                language_en = "use chinese to explain, ask and anwser in this session.",
-
-            },
+            prompts = require("prompt.sidekick_prompt").load(),
             tools = {
                 -- fix the proxying failed issue under niri with clash-rev / flclash's system proxy mode
                 -- using injecting the proxy env vars to the codex cli process
@@ -166,4 +162,22 @@ return {
             },
         },
     },
+    -- TODO: multiple codex sessions
+    -- config = function(_, opts)
+    --     require("sidekick").setup(opts)
+    --
+    --     -- clean the tab and session mapping that already exited.
+    --     -- default: kill background codex
+    --     vim.api.nvim_create_autocmd("TabClosed", {
+    --         callback = function()
+    --             vim.schedule(function()
+    --                 local alive = {}
+    --                 for _, tab in ipairs(vim.api.nvim_list_tabpages()) do alive[tab] = true end
+    --                 for tab, _ in pairs(alive) do
+    --                     if not alive[tab] then tab_sessions[tab] = nil end
+    --                 end
+    --             end)
+    --         end
+    --     })
+    -- end
 }
