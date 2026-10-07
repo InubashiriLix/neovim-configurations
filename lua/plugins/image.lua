@@ -2,6 +2,7 @@ if not vim.g.neovide then
     return {
 
         "3rd/image.nvim",
+        build = false, -- magick_cli uses ImageMagick directly; no LuaRocks build needed.
         opts = {
             backend = "kitty",        -- or "ueberzug" or "sixel"
             processor = "magick_cli", -- or "magick_rock"

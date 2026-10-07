@@ -10,4 +10,7 @@ vim.opt.expandtab = true -- 将 Tab 转换为空格
 vim.opt.softtabstop = 4  -- 输入 Tab 键时插入 4 个空格
 
 vim.opt.wrap = true      -- 禁止自动换行
-vim.o.shell = "/usr/bin/fish"
+local fish = vim.fn.exepath("fish")
+if fish ~= "" then
+    vim.o.shell = fish
+end

@@ -79,12 +79,13 @@ local opts = {
     enable = true,
     recursive_depth = 2,
     music_dirs = {
-        "~/Music/Ambient.nvim/albums/Casualities: Unknown/",
-        "~/Music/Ambient.nvim/default/",
-        "~/Music/Ambient.nvim/albums/In the Usual Motion/",
-        "~/Music/Ambient.nvim/albums/In the Unusual Motion/",
-        "~/Music/Ambient.nvim/albums/Signalis/",
-        "~/Music/Ambient.nvim/albums/Necrophobia/",
+        "~/Music/Ambient.nvim/",
+        -- "~/Music/Ambient.nvim/albums/Casualities: Unknown/",
+        -- "~/Music/Ambient.nvim/default/",
+        -- "~/Music/Ambient.nvim/albums/In the Usual Motion/",
+        -- "~/Music/Ambient.nvim/albums/In the Unusual Motion/",
+        -- "~/Music/Ambient.nvim/albums/Signalis/",
+        -- "~/Music/Ambient.nvim/albums/Necrophobia/",
     },
     mode = "continuous",
     volume = 80,
@@ -112,8 +113,7 @@ local opts = {
 
 return {
     {
-        -- "InubashiriLix/ambient.nvim",
-        dir = "/home/inubashiri/proj/neovim-plugin/ambient.nvim",
+        "InubashiriLix/ambient.nvim",
         name = "ambient.nvim",
         main = "ambient",
         -- WARNING: `event = "VeryLazy"` is not recommanded cause it will make lazy.nvim set it up immediately as you launching neovim, that is, uncommanded music scan will happend once you launch nvim.

@@ -3,7 +3,7 @@
 --     require("live-server-nvim").toggle()
 -- end, { desc = "live-server" })
 
-vim.keymap.set("n", "<leader>ls", "<cmd>LiveServerStaert -f<CR>", { desc = "live-server start" })
+vim.keymap.set("n", "<leader>ls", "<cmd>LiveServerStart -f<CR>", { desc = "live-server start" })
 
 vim.keymap.set("n", "<leader>le", "<cmd>LiveServerStop<CR>", { desc = "live-server stop" })
 

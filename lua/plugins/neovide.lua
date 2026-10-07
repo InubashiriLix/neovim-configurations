@@ -14,17 +14,17 @@ if vim.g.neovide then
 
     vim.g.neovide_remember_window_size = true
     vim.g.neovide_opacity = 0.80
-    vim.g.neovide_normal_opacioty = 0.80
+    vim.g.neovide_normal_opacity = 0.80
     vim.o.guifont = "JetBrains Maple Mono,Noto Sans CJK SC:h14"
 
     -- set the cursor color
     vim.api.nvim_set_hl(0, "CursorNormal", {
         fg = "#1e1e2e",
-        bg = "#8980ff",
+        bg = "#FF0000",
     })
     vim.api.nvim_set_hl(0, "CursorInsert", {
         fg = "#1e1e2e",
-        bg = "#a6e3a1",
+        bg = "#00FF00",
     })
     vim.api.nvim_set_hl(0, "CursorReplace", {
         fg = "#1e1e2e",

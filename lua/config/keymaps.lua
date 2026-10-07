@@ -8,9 +8,10 @@ vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true, desc = "Exit
 vim.keymap.set("i", "kk", "<Esc>", { noremap = true, silent = true, desc = "Exit insert mode" })
 vim.keymap.set("i", "kj", "<Esc>", { noremap = true, silent = true, desc = "Exit insert mode" })
 
--- Prevent accidental macro recording with `q`. Use <leader>qr to start/stop it.
-vim.keymap.set("n", "q", "<Nop>", { desc = "Disable accidental macro recording" })
-vim.keymap.set("n", "<leader>qr", "q", { noremap = true, desc = "Start/Stop Macro Recording" })
+-- Macro recording is permanently disabled: `q` does nothing in normal mode.
+-- The old <leader>qr start/stop binding was removed so you can no longer enter
+-- record mode. If you are currently stuck recording, run :normal! q to stop.
+vim.keymap.set("n", "q", "<Nop>", { desc = "Macro recording disabled" })
 
 
 -- enable and disable theme (I use tokyonight now) transparent

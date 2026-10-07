@@ -13,6 +13,7 @@ vim.keymap.set("n", "<leader>mt", "<cmd>Xmake select toolchain<CR>", { desc = "X
 return {
     {
         "Mythos-404/xmake.nvim",
+        enabled = vim.fn.executable("xmake") == 1,
         version = "^3",
         lazy = true,
         event = "BufReadPost",
