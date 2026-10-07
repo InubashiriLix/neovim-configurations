@@ -1,6 +1,10 @@
 return {
     -- "why the breaking soul?"
     "yetone/avante.nvim",
+    dependencies = {
+        "ColinKennedy/mega.logging",
+        "ColinKennedy/mega.cmdparse",
+    },
     keys = {
         { "<leader>aa",  false,                           mode = { "n", "x" } },
         { "<leader>acc", "<cmd>AvanteAsk<CR>",            desc = "Ask Avante",             mode = { "n", "x" } },

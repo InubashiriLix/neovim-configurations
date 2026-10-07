@@ -1,3 +1,5 @@
+local enable_log = true
+
 if vim.g.neovide then
     -- set the scale and fonts
     vim.g.neovide_scale_factor = 0.8
@@ -34,9 +36,13 @@ if vim.g.neovide then
         "r-cr-o:hor20-CursorReplace",
     }
 
-    vim.notify("Launch in Neovide, modify scale configuration enabled.", vim.log.levels.DEBUG)
+    if enable_log then
+        vim.notify("Launch in Neovide, modify scale configuration enabled.", vim.log.levels.DEBUG)
+    end
 else
-    vim.notify("Launch in Neovide, modify scale configuration disabled.", vim.log.levels.DEBUG)
+    if enable_log then
+        vim.notify("Launch in Terminal, modify scale configuration disabled.", vim.log.levels.DEBUG)
+    end
 end
 
 return {}
